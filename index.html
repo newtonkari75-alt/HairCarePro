@@ -4,8 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "vgb1q3rqon");
+    </script>
+
     <!-- ========================================== -->
-    <!-- GOOGLE ADS SAFE & ADVANCED SEO             -->
+    <!-- SEO AVANÇADO E CONFIGURAÇÕES DE PÁGINA     -->
     <!-- ========================================== -->
     
     <link rel="canonical" href="https://thebest.halogrow.shop/">
@@ -44,15 +53,6 @@
     }
     </script>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17925586657"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-17925586657');
-    </script>
-
     <!-- Styles & Fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -89,7 +89,6 @@
             width: 100%;
             padding-bottom: 100%;
             overflow: hidden;
-            /* Bordas removidas conforme solicitado */
             border-radius: 0; 
         }
         .carousel-image {
@@ -114,11 +113,22 @@
             color: var(--primary-dark);
             border: 2px solid var(--primary-dark);
         }
+        /* Mobile specific order adjustments */
+        .mobile-hero-grid {
+            display: flex;
+            flex-direction: column;
+        }
+        @media (min-width: 768px) {
+            .mobile-hero-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+        }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Header -->
+    <!-- Cabeçalho -->
     <header class="sticky top-0 bg-white/90 backdrop-blur-md z-50 shadow-sm border-b border-gray-100">
         <div class="container mx-auto flex justify-center items-center p-4">
             <img src="images/halogrow-logo.svg" width="140" height="32" alt="HaloGrow™ Logo" class="h-8 w-auto">
@@ -126,32 +136,27 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
+        <!-- Seção Hero Reorganizada -->
         <section class="py-10 md:py-16">
             <div class="container mx-auto px-4 sm:px-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Usando Grid/Flex com controle de ordem -->
+                <div class="mobile-hero-grid gap-12 items-center">
                     
-                    <!-- Left Column: Copy -->
-                    <div class="text-center md:text-left reveal flex flex-col items-center md:items-start">
+                    <!-- Lado Esquerdo (Desktop) / Container de Ordem (Mobile) -->
+                    <div class="flex flex-col items-center md:items-start text-center md:text-left">
                         
-                        <div class="glass-panel rounded-full px-5 py-2 mb-6 inline-flex items-center gap-3 shadow-sm">
+                        <!-- 1. Badge (Sempre primeiro) -->
+                        <div class="glass-panel rounded-full px-5 py-2 mb-6 inline-flex items-center gap-3 shadow-sm order-1">
                             <span class="text-xs font-bold uppercase tracking-widest">LIMITED TIME OFFER – SAVE 50% TODAY</span>
                         </div>
 
-                        <h1 class="text-3xl sm:text-5xl font-extrabold mb-6 leading-tight tracking-tight">
+                        <!-- 2. Título (Segundo) -->
+                        <h1 class="text-3xl sm:text-5xl font-extrabold mb-6 leading-tight tracking-tight order-2">
                             Restore the Look. <br> Restore the Confidence.
                         </h1>
-                        
-                        <p class="text-lg mb-8 leading-relaxed max-w-lg font-medium opacity-90">
-                            HaloGrow™ is an advanced scalp-targeted formula developed with clinically studied ingredients to support visibly thicker, healthier-looking hair.
-                        </p>
 
-                        <p class="text-sm mb-8 leading-relaxed max-w-lg opacity-70 italic">
-                            Designed for men and women experiencing thinning, shedding, or reduced density — without prescriptions, surgery, or harsh treatments.
-                        </p>
-                        
-                        <!-- Mobile Carousel -->
-                        <div class="my-6 flex justify-center items-center md:hidden w-full">
+                        <!-- 3. Carrossel Mobile (Terceiro - apenas mobile) -->
+                        <div class="my-6 flex justify-center items-center md:hidden w-full order-3">
                             <div class="carousel-container w-full max-w-sm">
                                 <img src="images/halogrow.jpg" class="carousel-image active mob-img" alt="HaloGrow">
                                 <img src="images/halogrow1.jpg" class="carousel-image mob-img" alt="HaloGrow">
@@ -161,8 +166,23 @@
                             </div>
                         </div>
 
-                        <!-- Benefits Box -->
-                        <div class="w-full max-w-md glass-panel rounded-3xl p-6 mb-8 text-left shadow-md">
+                        <!-- 4. Botões (Quarto no Mobile) -->
+                        <div class="flex flex-col sm:flex-row gap-4 w-full max-w-md order-4 md:order-6 md:mt-8">
+                            <a href="https://www.clickrtrckr.com/2LXFFTP/7BM9F7R/?uid=11234" class="btn-outline flex items-center justify-center text-lg font-bold px-8 py-4 rounded-2xl flex-1 transition-all hover:shadow-xl hover:-translate-y-1">
+                                Mulher
+                            </a>
+                            <a href="https://www.clickrtrckr.com/2LXFFTP/7BM9F7R/?uid=11239" class="btn-filled flex items-center justify-center text-lg font-bold px-8 py-4 rounded-2xl flex-1 transition-all hover:shadow-xl hover:-translate-y-1">
+                                Homem
+                            </a>
+                        </div>
+
+                        <!-- 5. Descrição (Quinto no Mobile) -->
+                        <p class="text-lg mb-8 leading-relaxed max-w-lg font-medium opacity-90 order-5 md:order-3 md:mt-0 mt-8">
+                            HaloGrow™ is an advanced scalp-targeted formula developed with clinically studied ingredients to support visibly thicker, healthier-looking hair.
+                        </p>
+
+                        <!-- 6. Box de Benefícios (Sexto no Mobile) -->
+                        <div class="w-full max-w-md glass-panel rounded-3xl p-6 mb-8 text-left shadow-md order-6 md:order-4">
                             <h3 class="font-bold mb-4 uppercase text-xs tracking-widest opacity-60">Why Choose HaloGrow™</h3>
                             <ul class="space-y-3">
                                 <li class="flex items-center gap-3">
@@ -188,18 +208,13 @@
                             </ul>
                         </div>
 
-                        <!-- Buttons -->
-                        <div class="flex flex-col sm:flex-row gap-4 w-full max-w-md">
-                            <a href="https://www.clickrtrckr.com/2LXFFTP/7BM9F7R/?uid=11234" class="btn-outline flex items-center justify-center text-lg font-bold px-8 py-4 rounded-2xl flex-1 transition-all hover:shadow-xl hover:-translate-y-1">
-                                Mulher
-                            </a>
-                            <a href="https://www.clickrtrckr.com/2LXFFTP/7BM9F7R/?uid=11239" class="btn-filled flex items-center justify-center text-lg font-bold px-8 py-4 rounded-2xl flex-1 transition-all hover:shadow-xl hover:-translate-y-1">
-                                Homem
-                            </a>
-                        </div>
+                        <!-- Texto Adicional Preservado -->
+                        <p class="text-sm mb-8 leading-relaxed max-w-lg opacity-70 italic order-7 md:order-5">
+                            Designed for men and women experiencing thinning, shedding, or reduced density — without prescriptions, surgery, or harsh treatments.
+                        </p>
                     </div>
 
-                    <!-- Right Column: Desktop Carousel -->
+                    <!-- Lado Direito: Carrossel Desktop (Escondido no mobile, já temos o mobile-order-3) -->
                     <div class="hidden md:flex justify-center items-center h-full reveal">
                         <div class="carousel-container w-full max-w-lg">
                             <img src="images/halogrow.jpg" class="carousel-image active desk-img" alt="HaloGrow">
@@ -213,7 +228,7 @@
             </div>
         </section>
 
-        <!-- Technology Section -->
+        <!-- Seções Restantes Mantidas -->
         <section class="py-16 bg-white">
             <div class="container mx-auto px-4 max-w-4xl text-center reveal">
                 <h2 class="text-2xl md:text-3xl font-bold mb-6">Smart, Targeted Scalp Technology</h2>
@@ -240,7 +255,6 @@
             </div>
         </section>
 
-        <!-- Audience Section -->
         <section class="py-16">
             <div class="container mx-auto px-4 max-w-5xl">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center reveal">
@@ -279,7 +293,6 @@
             </div>
         </section>
 
-        <!-- Guarantee Section -->
         <section class="py-16 bg-[#0C230E] text-[#EDEDE4] text-center">
             <div class="container mx-auto px-4 reveal">
                 <h2 class="text-3xl font-bold mb-4">30-Day Money-Back Guarantee</h2>
@@ -292,12 +305,11 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-gray-900 text-gray-400 py-16 text-sm">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
                 <div class="text-center md:text-left">
-                    <h4 class="text-white font-bold mb-4 uppercase tracking-widest text-xs">Authorised Global Reseller</h4>
+                    <h4 class="text-white font-bold mb-4 uppercase tracking-widest text-xs">Official Global Office</h4>
                     <p>Convenity, UAB</p>
                     <p>Gedimino St. 45-7</p>
                     <p>LT-44248 Kaunas, Lithuania</p>
@@ -324,11 +336,10 @@
         </div>
     </footer>
 
-    <!-- Policy Modal -->
     <div id="policy-modal" class="fixed inset-0 z-[100] hidden">
         <div class="fixed inset-0 bg-black/80 backdrop-blur-sm" onclick="closeModal()"></div>
         <div class="relative top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white w-[95%] max-w-2xl p-8 rounded-3xl max-h-[80vh] overflow-y-auto">
-            <h2 class="text-2xl font-bold mb-4">Information</h2>
+            <h2 class="text-2xl font-bold mb-4 text-primary-dark">Information</h2>
             <div class="space-y-4 text-gray-600">
                 <p>HaloGrow™ is committed to transparency. Our 30-day money-back guarantee starts from the day of delivery.</p>
                 <p>For support, please contact support@halogrow.com.</p>
@@ -338,22 +349,24 @@
     </div>
 
     <script>
-        // Carousel Logic
         function startCarousel() {
             const deskImages = document.querySelectorAll('.desk-img');
             const mobImages = document.querySelectorAll('.mob-img');
             let index = 0;
 
             setInterval(() => {
-                deskImages[index].classList.remove('active');
-                mobImages[index].classList.remove('active');
-                index = (index + 1) % deskImages.length;
-                deskImages[index].classList.add('active');
-                mobImages[index].classList.add('active');
+                if(deskImages.length > 0) {
+                    deskImages[index].classList.remove('active');
+                    deskImages[(index + 1) % deskImages.length].classList.add('active');
+                }
+                if(mobImages.length > 0) {
+                    mobImages[index].classList.remove('active');
+                    mobImages[(index + 1) % mobImages.length].classList.add('active');
+                }
+                index = (index + 1) % (deskImages.length || mobImages.length);
             }, 3000);
         }
 
-        // Scroll Reveal
         function reveal() {
             const reveals = document.querySelectorAll(".reveal");
             reveals.forEach(el => {
