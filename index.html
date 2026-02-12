@@ -13,12 +13,73 @@
         })(window, document, "clarity", "script", "vgb1q3rqon");
     </script>
 
-    <!-- SEO & Metadata -->
-    <link rel="canonical" href="https://thebest.halogrow.shop/">
-    <link rel="alternate" hreflang="x-default" href="https://thebest.halogrow.shop/">
-    <title data-translate="meta_title">HaloGrow™ Official | Advanced Scalp-Targeted Hair Formula</title>
-    <meta name="description" content="HaloGrow™ is an advanced scalp-targeted formula to support visibly thicker, healthier-looking hair. Save 50% Today.">
+    <!-- Script de Rastreamento Adicional -->
+    <script src="https://cdn.raadsgate.com/code/8300-b2907e6b-f4cc-4ec7-af9e-50dc807347b6"></script>
+
+    <!-- ========================================== -->
+    <!-- SEO INVISÍVEL & GROUNDING ESTRATÉGICO      -->
+    <!-- ========================================== -->
+    <link rel="canonical" href="https://haircarespray.vercel.app/">
+    <link rel="alternate" hreflang="en-us" href="https://haircarespray.vercel.app/">
+    <link rel="alternate" hreflang="en-gb" href="https://haircarespray.vercel.app/">
+    <link rel="alternate" hreflang="en-au" href="https://haircarespray.vercel.app/">
+    <link rel="alternate" hreflang="en-ca" href="https://haircarespray.vercel.app/">
+    <link rel="alternate" hreflang="en-nz" href="https://haircarespray.vercel.app/">
+    <link rel="alternate" hreflang="en-ie" href="https://haircarespray.vercel.app/">
+    <link rel="alternate" hreflang="de-de" href="https://haircarespray.vercel.app/">
+    <link rel="alternate" hreflang="nl-nl" href="https://haircarespray.vercel.app/">
+    
+    <title data-translate="meta_title">HaloGrow™ Official | Halo Grow Spray & Hair Formula</title>
+    <meta name="description" content="HaloGrow™ (Halo Grow Spray) is the #1 advanced scalp-targeted formula for visibly thicker hair. Trusted in US, UK, CA, AU. Save 50% Today.">
+    <meta name="keywords" content="HaloGrow, Halo Grow Spray, Halo Grow Hair Spray, hair density, scalp treatment, thicker hair, hair regrowth formula">
+    
+    <!-- Geo Targeting for Ad Quality -->
+    <meta name="geo.region" content="US, GB, CA, AU, NZ, DE, IE, NL" />
+    <meta name="coverage" content="Worldwide" />
     <link rel="icon" href="images/faviconV2.png" type="image/png">
+
+    <!-- JSON-LD Estendido (SEO Invisível de Alta Conversão) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "HaloGrow™ Spray",
+      "alternateName": ["Halo Grow Spray", "Halo Grow Hair Spray"],
+      "image": ["https://haircarespray.vercel.app/images/halogrow.jpg"],
+      "description": "Premium scalp-targeted Halo Grow Hair Spray designed for men and women to restore hair appearance and confidence.",
+      "brand": { "@type": "Brand", "name": "HaloGrow™" },
+      "sku": "HG-SPRAY-01",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://haircarespray.vercel.app/",
+        "priceCurrency": "USD",
+        "price": "39.00",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": { "@type": "MonetaryAmount", "value": "4.95", "currency": "USD" },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+            "transitTime": { "@type": "QuantitativeValue", "minValue": 2, "maxValue": 15, "unitCode": "DAY" }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "CH",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 30,
+          "returnMethod": "https://schema.org/ReturnByMail"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "12450"
+      }
+    }
+    </script>
 
     <!-- Styles & Fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -28,94 +89,34 @@
     <script src="https://unpkg.com/feather-icons"></script>
 
     <style>
-        :root {
-            --primary-dark: #0C230E;
-            --bg-light: #EDEDE4;
-        }
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--bg-light);
-            color: var(--primary-dark);
-            -webkit-font-smoothing: antialiased;
-        }
-        
-        .reveal {
-            opacity: 0;
-            transform: translateY(15px);
-            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Carousel Styling - Zero Borders & Shadows */
-        .carousel-container {
-            position: relative;
-            width: 100%;
-            aspect-ratio: 1/1;
-            overflow: hidden;
-            background: transparent;
-            border: none !important;
-            border-radius: 0 !important;
-            box-shadow: none !important;
-        }
-        .carousel-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-        .carousel-image.active {
-            opacity: 1;
-        }
-
-        .btn-main {
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .btn-main:active {
-            transform: scale(0.98);
-        }
-
-        @media (max-width: 767px) {
-            h1 { font-size: 2.1rem !important; line-height: 1.15 !important; }
-            .carousel-wrapper { margin-left: -1rem; margin-right: -1rem; width: calc(100% + 2rem); }
-        }
-
-        .glass-card {
-            background: rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(12, 35, 14, 0.05);
-        }
-
-        /* Fix Table for Mobile */
-        .policy-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.7rem; }
-        .policy-table th, .policy-table td { border: 1px solid #ddd; padding: 4px; text-align: left; }
+        :root { --primary-dark: #0C230E; --bg-light: #EDEDE4; }
+        body { font-family: 'Montserrat', sans-serif; background-color: var(--bg-light); color: var(--primary-dark); -webkit-font-smoothing: antialiased; }
+        .reveal { opacity: 0; transform: translateY(15px); transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .carousel-container { position: relative; width: 100%; aspect-ratio: 1/1; overflow: hidden; background: transparent; border: none !important; border-radius: 0 !important; box-shadow: none !important; }
+        .carousel-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1s ease-in-out; }
+        .carousel-image.active { opacity: 1; }
+        .btn-main { transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 1px; }
+        .btn-main:active { transform: scale(0.98); }
+        @media (max-width: 767px) { h1 { font-size: 2.3rem !important; line-height: 1.1 !important; } .carousel-wrapper { margin-left: -1rem; margin-right: -1rem; width: calc(100% + 2rem); } }
+        @media (min-width: 768px) { h1 { font-size: 4.5rem !important; line-height: 1.05 !important; } }
+        .glass-card { background: rgba(255, 255, 255, 0.3); backdrop-filter: blur(10px); border: 1px solid rgba(12, 35, 14, 0.05); }
     </style>
 </head>
 <body class="antialiased overflow-x-hidden">
 
-    <!-- Header -->
     <header class="sticky top-0 bg-white/80 backdrop-blur-md z-50 border-b border-black/5">
         <div class="container mx-auto px-4 py-3 flex justify-center">
-            <img src="images/halogrow-logo.svg" width="130" height="30" alt="HaloGrow™ Logo" class="h-7 w-auto">
+            <img src="images/halogrow-logo.svg" width="130" height="30" alt="HaloGrow Official Logo - Halo Grow Hair Spray" class="h-7 w-auto">
         </div>
     </header>
 
     <main>
-        <!-- Hero Section - Mobile Priority Order -->
-        <section class="relative pt-6 md:pt-16">
+        <!-- Hero Section -->
+        <section class="relative pt-8 md:pt-20">
             <div class="container mx-auto px-4 md:px-6">
-                <div class="flex flex-col md:grid md:grid-cols-2 md:gap-16 items-center">
-                    
+                <div class="flex flex-col md:grid md:grid-cols-2 md:gap-20 items-center">
                     <div class="flex flex-col w-full md:text-left">
-                        <!-- 1. Badge -->
                         <div class="inline-flex items-center gap-2 bg-white/60 px-4 py-2 rounded-full self-center md:self-start mb-6 border border-black/5 shadow-sm order-1">
                             <span class="w-2 h-2 rounded-full bg-green-800 animate-pulse"></span>
                             <span class="text-[10px] font-extrabold uppercase tracking-widest text-primary-dark" data-translate="discount_badge">
@@ -123,116 +124,105 @@
                             </span>
                         </div>
 
-                        <!-- 2. Título -->
-                        <h1 class="text-center md:text-left font-extrabold text-primary-dark mb-2 leading-tight tracking-tight order-2">
+                        <h1 class="text-center md:text-left font-extrabold text-primary-dark mb-4 tracking-tighter order-2">
                             <span data-translate="hero_title_1">Restore the Look.</span><br> 
                             <span class="opacity-60" data-translate="hero_title_2">Restore the Confidence.</span>
                         </h1>
 
-                        <!-- 3. Foto/Carrossel (Visível no Mobile aqui) -->
-                        <div class="carousel-wrapper my-6 md:hidden order-3">
+                        <!-- Photo/Carousel Mobile -->
+                        <div class="carousel-wrapper my-8 md:hidden order-3">
                             <div class="carousel-container">
-                                <img src="images/halogrow.jpg" class="carousel-image active mob-img" alt="HaloGrow Results">
-                                <img src="images/halogrow1.jpg" class="carousel-image mob-img" alt="HaloGrow 1">
-                                <img src="images/halogrow2.jpg" class="carousel-image mob-img" alt="HaloGrow 2">
-                                <img src="images/halogrow3.avif" class="carousel-image mob-img" alt="HaloGrow 3">
-                                <img src="images/halogrow4.jpg" class="carousel-image mob-img" alt="HaloGrow 4">
+                                <img src="images/halogrow.jpg" class="carousel-image active mob-img" alt="HaloGrow Spray Result 1">
+                                <img src="images/halogrow1.jpg" class="carousel-image mob-img" alt="HaloGrow Spray High Definition">
+                                <img src="images/halogrow2.jpg" class="carousel-image mob-img" alt="Halo Grow Hair Spray Texture">
+                                <img src="images/halogrow3.avif" class="carousel-image mob-img" alt="HaloGrow Scalp Care Detail">
+                                <img src="images/halogrow4.jpg" class="carousel-image mob-img" alt="HaloGrow Hair Solution">
                             </div>
                         </div>
 
-                        <!-- 4. Botões de Ação (Abaixo da foto no mobile) -->
-                        <div class="flex flex-col gap-3 w-full max-w-sm mx-auto md:mx-0 order-4 md:order-6 mt-2 md:mt-8">
-                            <div class="flex flex-row gap-3">
-                                <a href="https://www.clickrtrckr.com/2LXFFTP/7BM9F7R/?uid=11234" class="btn-main flex-1 bg-white text-[#0C230E] border-2 border-primary-dark font-bold py-4 px-4 rounded-xl text-center text-xs sm:text-sm shadow-md">
+                        <!-- Buttons -->
+                        <div class="flex flex-col sm:flex-row gap-4 w-full max-w-sm mx-auto md:mx-0 order-4 md:order-6 mt-4 md:mt-10">
+                            <div class="flex flex-row gap-3 w-full">
+                                <a href="https://www.clickrtrckr.com/2LXFFTP/7BM9F7R/?uid=11234" class="btn-main flex-1 bg-white text-[#0C230E] border-2 border-primary-dark font-black py-4 px-4 rounded-xl text-center text-sm md:text-base shadow-lg hover:bg-gray-50 transition-all">
                                     <span data-translate="btn_woman">Woman</span>
                                 </a>
-                                <a href="https://www.clickrtrckr.com/2LXFFTP/7BM9F7R/?uid=11239" class="btn-main flex-1 bg-[#0C230E] text-[#EDEDE4] font-bold py-4 px-4 rounded-xl text-center text-xs sm:text-sm shadow-md">
+                                <a href="https://www.clickrtrckr.com/2LXFFTP/7BM9F7R/?uid=11239" class="btn-main flex-1 bg-[#0C230E] text-[#EDEDE4] font-black py-4 px-4 rounded-xl text-center text-sm md:text-base shadow-lg hover:opacity-90 transition-all">
                                     <span data-translate="btn_man">Man</span>
                                 </a>
                             </div>
-                            <p class="text-[9px] text-center opacity-40 uppercase tracking-widest font-bold mt-1">
+                            <p class="text-[10px] text-center opacity-40 uppercase tracking-widest font-bold mt-1">
                                 <i data-feather="lock" class="inline w-3 h-3 mr-1"></i> <span data-translate="secure_checkout">Secure Checkout</span>
                             </p>
                         </div>
 
-                        <!-- 5. Descrição Contextual -->
                         <div class="order-5 md:order-3">
-                            <p class="text-center md:text-left text-base font-semibold leading-relaxed my-6 opacity-90" data-translate="hero_desc">
+                            <p class="text-center md:text-left text-lg md:text-xl font-semibold leading-relaxed my-8 opacity-90" data-translate="hero_desc">
                                 HaloGrow™ is an advanced scalp-targeted formula developed with clinically studied ingredients to support visibly thicker, healthier-looking hair.
                             </p>
-                            
-                            <!-- 6. Quadro de Benefícios -->
-                            <div class="glass-card rounded-2xl p-6 mb-8 order-6 md:order-4">
-                                <h3 class="text-[10px] font-extrabold uppercase tracking-widest opacity-40 mb-4" data-translate="benefits_label">Why Choose HaloGrow™</h3>
-                                <ul class="space-y-4 text-sm font-bold">
-                                    <li class="flex items-center gap-4">
-                                        <i data-feather="check" class="w-4 h-4 text-green-800"></i> <span data-translate="benefit_1">Advanced DHT-targeted technology</span>
-                                    </li>
-                                    <li class="flex items-center gap-4">
-                                        <i data-feather="check" class="w-4 h-4 text-green-800"></i> <span data-translate="benefit_2">Supports stronger, fuller-looking hair</span>
-                                    </li>
-                                    <li class="flex items-center gap-4">
-                                        <i data-feather="check" class="w-4 h-4 text-green-800"></i> <span data-translate="benefit_3">30-Day Satisfaction Guarantee</span>
-                                    </li>
+                            <div class="glass-card rounded-3xl p-8 mb-10 order-6 md:order-4">
+                                <h3 class="text-[11px] font-extrabold uppercase tracking-widest opacity-40 mb-6" data-translate="benefits_label">Why Choose HaloGrow™</h3>
+                                <ul class="space-y-5 text-sm md:text-base font-bold">
+                                    <li class="flex items-center gap-4"><i data-feather="check" class="w-5 h-5 text-green-800"></i> <span data-translate="benefit_1">Advanced DHT-targeted technology</span></li>
+                                    <li class="flex items-center gap-4"><i data-feather="check" class="w-5 h-5 text-green-800"></i> <span data-translate="benefit_2">Supports stronger, fuller-looking hair</span></li>
+                                    <li class="flex items-center gap-4"><i data-feather="check" class="w-5 h-5 text-green-800"></i> <span data-translate="benefit_3">30-Day Satisfaction Guarantee</span></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Desktop Image (Lado direito no PC) -->
-                    <div class="hidden md:block reveal">
+                    <!-- Desktop Carousel -->
+                    <div class="hidden md:block reveal md:order-last">
                         <div class="carousel-container">
-                            <img src="images/halogrow.jpg" class="carousel-image active desk-img" alt="HaloGrow">
-                            <img src="images/halogrow1.jpg" class="carousel-image desk-img" alt="HaloGrow 1">
-                            <img src="images/halogrow2.jpg" class="carousel-image desk-img" alt="HaloGrow 2">
-                            <img src="images/halogrow3.avif" class="carousel-image desk-img" alt="HaloGrow 3">
-                            <img src="images/halogrow4.jpg" class="carousel-image desk-img" alt="HaloGrow 4">
+                            <img src="images/halogrow.jpg" class="carousel-image active desk-img" alt="HaloGrow Spray - Original Result">
+                            <img src="images/halogrow1.jpg" class="carousel-image desk-img" alt="HaloGrow Spray - Advanced Scalp Formula">
+                            <img src="images/halogrow2.jpg" class="carousel-image desk-img" alt="Halo Grow Hair Spray Application">
+                            <img src="images/halogrow3.avif" class="carousel-image desk-img" alt="Halo Grow Spray Nutrition">
+                            <img src="images/halogrow4.jpg" class="carousel-image desk-img" alt="HaloGrow Strength Performance">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Product Value Section -->
-        <section class="py-16 bg-white reveal">
-            <div class="container mx-auto px-4 max-w-4xl text-center">
-                <h2 class="text-2xl font-bold mb-6 tracking-tight" data-translate="tech_title">Smart, Targeted Scalp Technology</h2>
-                <p class="text-gray-600 mb-10 text-sm md:text-base leading-relaxed" data-translate="tech_desc">
-                    Unlike traditional supplements, HaloGrow™ delivers key ingredients directly to the scalp — where hair growth begins. By supporting circulation and helping maintain a balanced scalp environment.
+        <!-- Product Value -->
+        <section class="py-20 bg-white reveal">
+            <div class="container mx-auto px-4 max-w-5xl text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 tracking-tight" data-translate="tech_title">Smart, Targeted Scalp Technology</h2>
+                <p class="text-gray-600 mb-12 text-base md:text-lg leading-relaxed max-w-3xl mx-auto" data-translate="tech_desc">
+                    Unlike traditional supplements, HaloGrow™ delivers key ingredients directly to the scalp — where hair growth begins.
                 </p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-                    <div class="p-8 bg-slate-50 rounded-3xl">
-                        <i data-feather="activity" class="text-green-900 mb-4"></i>
-                        <h4 class="font-bold mb-2" data-translate="feat_1_title">Follicle Focus</h4>
-                        <p class="text-xs text-gray-500" data-translate="feat_1_desc">Works at the root level to support improved hair density over time.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                    <div class="p-10 bg-slate-50 rounded-[2rem] border border-black/5">
+                        <i data-feather="activity" class="text-green-900 mb-6 w-8 h-8"></i>
+                        <h4 class="font-bold text-xl mb-3" data-translate="feat_1_title">Follicle Focus</h4>
+                        <p class="text-sm text-gray-500" data-translate="feat_1_desc">Works at the root level to support improved hair density over time.</p>
                     </div>
-                    <div class="p-8 bg-slate-50 rounded-3xl">
-                        <i data-feather="sun" class="text-green-900 mb-4"></i>
-                        <h4 class="font-bold mb-2" data-translate="feat_2_title">Revitalisation</h4>
-                        <p class="text-xs text-gray-500" data-translate="feat_2_desc">Maintains a balanced scalp environment for a healthier appearance.</p>
+                    <div class="p-10 bg-slate-50 rounded-[2rem] border border-black/5">
+                        <i data-feather="sun" class="text-green-900 mb-6 w-8 h-8"></i>
+                        <h4 class="font-bold text-xl mb-3" data-translate="feat_2_title">Revitalisation</h4>
+                        <p class="text-sm text-gray-500" data-translate="feat_2_desc">Maintains a balanced scalp environment for a healthier appearance.</p>
                     </div>
-                    <div class="p-8 bg-slate-50 rounded-3xl">
-                        <i data-feather="zap" class="text-green-900 mb-4"></i>
-                        <h4 class="font-bold mb-2" data-translate="feat_3_title">Fast-Acting</h4>
-                        <p class="text-xs text-gray-500" data-translate="feat_3_desc">Lightweight, non-greasy formula that fits your daily routine.</p>
+                    <div class="p-10 bg-slate-50 rounded-[2rem] border border-black/5">
+                        <i data-feather="zap" class="text-green-900 mb-6 w-8 h-8"></i>
+                        <h4 class="font-bold text-xl mb-3" data-translate="feat_3_title">Fast-Acting</h4>
+                        <p class="text-sm text-gray-500" data-translate="feat_3_desc">Lightweight, non-greasy formula that fits your daily routine seamlessly.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Guarantee Section - High Contrast Fix -->
-        <section class="py-20 bg-[#0C230E] text-[#EDEDE4] text-center">
+        <!-- Guarantee Section -->
+        <section class="py-24 bg-[#0C230E] text-[#EDEDE4] text-center">
             <div class="container mx-auto px-4 reveal">
-                <h2 class="text-3xl font-bold mb-6" data-translate="guarantee_title">30-Day Money-Back Guarantee</h2>
-                <p class="text-lg opacity-80 mb-10 max-w-xl mx-auto" data-translate="guarantee_desc">
-                    Try HaloGrow™ risk-free. If you’re not satisfied within 30 days, we’ll make it right. Your confidence matters.
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-8 tracking-tight" data-translate="guarantee_title">30-Day Money-Back Guarantee</h2>
+                <p class="text-lg md:text-xl opacity-80 mb-12 max-w-2xl mx-auto" data-translate="guarantee_desc_full">
+                    Try HaloGrow™ risk-free. If you’re not satisfied within 30 days, we’ll make it right.
                 </p>
-                <div class="flex flex-row justify-center gap-4 max-w-md mx-auto">
-                    <!-- Text color forced to Dark Green for contrast as per image request -->
-                    <a href="https://www.clickrtrckr.com/2LXFFTP/7BM9F7R/?uid=11234" class="bg-white text-[#0C230E] font-bold py-4 px-8 rounded-2xl flex-1 transition-transform active:scale-95 shadow-xl text-sm sm:text-base">
+                <div class="flex flex-row justify-center gap-6 max-w-lg mx-auto">
+                    <a href="https://www.clickrtrckr.com/2LXFFTP/7BM9F7R/?uid=11234" class="bg-white text-[#0C230E] font-black py-5 px-10 rounded-2xl flex-1 transition-all active:scale-95 shadow-2xl text-base md:text-lg">
                         <span data-translate="btn_woman">Mulher</span>
                     </a>
-                    <a href="https://www.clickrtrckr.com/2LXFFTP/7BM9F7R/?uid=11239" class="bg-[#EDEDE4] text-[#0C230E] font-bold py-4 px-8 rounded-2xl flex-1 transition-transform active:scale-95 shadow-xl text-sm sm:text-base">
+                    <a href="https://www.clickrtrckr.com/2LXFFTP/7BM9F7R/?uid=11239" class="bg-[#EDEDE4] text-[#0C230E] font-black py-5 px-10 rounded-2xl flex-1 transition-all active:scale-95 shadow-2xl text-base md:text-lg">
                         <span data-translate="btn_man">Homem</span>
                     </a>
                 </div>
@@ -241,32 +231,32 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-20 text-xs">
+    <footer class="bg-gray-900 text-gray-400 py-24 text-xs">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 border-b border-white/5 pb-16">
-                <div class="text-center md:text-left">
-                    <h4 class="text-white font-bold mb-4 uppercase tracking-widest text-[10px]" data-translate="footer_office_title">Official Global Office</h4>
-                    <p class="mb-1">Adlibris USA LLC</p>
-                    <p class="mb-1">1908 Thomes Avenue, Cheyenne, WY 82001, USA</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-20 border-b border-white/5 pb-20 text-center md:text-left">
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-[11px]" data-translate="footer_office_title">Official Global Office</h4>
+                    <p class="mb-2">Adlibris USA LLC</p>
+                    <p class="mb-2">1908 Thomes Avenue, Cheyenne, WY 82001, USA</p>
                 </div>
-                <div class="text-center md:text-left">
-                    <h4 class="text-white font-bold mb-4 uppercase tracking-widest text-[10px]" data-translate="footer_contact_title">Support Channel</h4>
-                    <p class="mb-1">Email: support@halogrow.com</p>
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-[11px]" data-translate="footer_contact_title">Support Channel</h4>
+                    <p class="mb-2">Email: support@halogrow.com</p>
                     <p>Direct: +1 (404) 678-8537</p>
                 </div>
             </div>
 
-            <div class="flex flex-wrap justify-center gap-x-10 gap-y-4 mb-12 font-bold uppercase tracking-widest text-white/40">
-                <button onclick="openPolicy('privacy')" data-translate="f_privacy">Privacy Policy</button>
-                <button onclick="openPolicy('terms')" data-translate="f_terms">Terms of Sale</button>
-                <button onclick="openPolicy('shipping')" data-translate="f_shipping">Shipping Policy</button>
-                <button onclick="openPolicy('returns')" data-translate="f_returns">Return Policy</button>
-                <button onclick="openPolicy('contact')" data-translate="f_contact">Contact Us</button>
+            <div class="flex flex-wrap justify-center gap-x-12 gap-y-6 mb-16 font-bold uppercase tracking-widest text-white/50">
+                <button onclick="openPolicy('privacy')" data-translate="f_privacy" class="hover:text-white">Privacy Policy</button>
+                <button onclick="openPolicy('terms')" data-translate="f_terms" class="hover:text-white">Terms of Sale</button>
+                <button onclick="openPolicy('shipping')" data-translate="f_shipping" class="hover:text-white">Shipping Policy</button>
+                <button onclick="openPolicy('returns')" data-translate="f_returns" class="hover:text-white">Return Policy</button>
+                <button onclick="openPolicy('contact')" data-translate="f_contact" class="hover:text-white">Contact Us</button>
             </div>
 
-            <div class="max-w-4xl mx-auto text-center opacity-40 space-y-4 leading-relaxed">
-                <p data-translate="f_disclaimer">Results may vary. HaloGrow™ is not intended to diagnose, treat, cure, or prevent any medical condition. For general informational purposes only.</p>
-                <p class="mt-10 font-bold" data-translate="f_copyright">Authorized Distributor. © 2026 HaloGrow™. All Rights Reserved.</p>
+            <div class="max-w-4xl mx-auto text-center opacity-40 space-y-6 leading-relaxed">
+                <p data-translate="f_disclaimer">Results may vary. HaloGrow™ is not intended to diagnose, treat, cure, or prevent any medical condition.</p>
+                <p class="mt-12 font-bold text-sm" data-translate="f_copyright">Authorized Distributor. © 2026 HaloGrow™. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -274,40 +264,39 @@
     <!-- Universal Modal -->
     <div id="policy-modal" class="fixed inset-0 z-[100] hidden">
         <div class="fixed inset-0 bg-black/90 backdrop-blur-sm" onclick="closeModal()"></div>
-        <div class="relative top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white w-[95%] max-w-4xl p-6 md:p-10 rounded-3xl max-h-[85vh] overflow-y-auto">
-            <div class="flex justify-between items-start mb-6">
-                <h2 id="modal-title" class="text-2xl font-bold text-primary-dark">Policy</h2>
-                <button onclick="closeModal()" class="p-2 hover:bg-gray-100 rounded-full"><i data-feather="x"></i></button>
+        <div class="relative top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white w-[95%] max-w-4xl p-8 md:p-12 rounded-[2.5rem] max-h-[85vh] overflow-y-auto shadow-2xl">
+            <div class="flex justify-between items-start mb-8">
+                <h2 id="modal-title" class="text-3xl font-bold text-primary-dark">Policy</h2>
+                <button onclick="closeModal()" class="p-3 hover:bg-gray-100 rounded-full transition-colors"><i data-feather="x"></i></button>
             </div>
-            <div id="modal-content" class="space-y-4 text-gray-700 text-sm leading-relaxed text-left"></div>
-            <button onclick="closeModal()" class="mt-10 w-full bg-primary-dark text-white py-4 rounded-xl font-bold uppercase tracking-widest text-xs" data-translate="btn_close">Close</button>
+            <div id="modal-content" class="space-y-6 text-gray-700 text-sm md:text-base leading-relaxed text-left"></div>
+            <button onclick="closeModal()" class="mt-12 w-full bg-primary-dark text-white py-5 rounded-2xl font-bold uppercase tracking-widest text-xs" data-translate="btn_close">Close</button>
         </div>
     </div>
 
-    <!-- Policy Content Storage -->
+    <!-- Templates -->
     <template id="terms-content">
-        <h3 class="font-bold">TERMS OF SALE</h3>
-        <p>Products sold by HaloGrow™ are for personal, non-commercial use only. Resale is prohibited. By placing an order, you acknowledge entering into an agreement with Adlibris USA LLC.</p>
+        <h3 class="font-bold text-lg">TERMS OF SALE</h3>
+        <p>Products sold by HaloGrow™ are for personal use only. Resale is prohibited. Agreement with Adlibris USA LLC.</p>
     </template>
     <template id="privacy-content">
-        <h3 class="font-bold">Privacy Policy</h3>
-        <p>We process your data securely in accordance with GDPR and CCPA. We collect essential information only to fulfill purchase requests and improve security.</p>
+        <h3 class="font-bold text-lg">Privacy Policy</h3>
+        <p>We process your data securely in accordance with GDPR and CCPA. We collect essential information to fulfill requests.</p>
     </template>
     <template id="shipping-content">
-        <h3 class="font-bold">Global Shipping Policy</h3>
-        <p>Fast worldwide shipping. Processing within 24h. US: 2-5 days. International: 10-18 days. Flat rate from $4.95.</p>
+        <h3 class="font-bold text-lg">Global Shipping Policy</h3>
+        <p>Worldwide shipping. Processing: 24h. US: 2-5 days. International: 10-18 days.</p>
     </template>
     <template id="returns-content">
-        <h3 class="font-bold">Return Policy</h3>
-        <p>30-Day Money-Back Guarantee for first-time orders. Items must be returned in original, unopened condition. Contact support first.</p>
+        <h3 class="font-bold text-lg">Return Policy</h3>
+        <p>30-Day Money-Back Guarantee. Return items in original condition. Contact support first.</p>
     </template>
     <template id="contact-content">
-        <h3 class="font-bold">Contact Us</h3>
-        <p>Email: support@halogrow.com | Phone: +1 (404) 678-8537 | NYC Office: 169 Madison Ave STE 15713 New York, NY 10016</p>
+        <h3 class="font-bold text-lg">Contact Us</h3>
+        <p>Email: support@halogrow.com | Phone: +1 (404) 678-8537</p>
     </template>
 
     <script>
-        // Automatic Carousel Logic (3s)
         function startCarousel() {
             const deskImages = document.querySelectorAll('.desk-img');
             const mobImages = document.querySelectorAll('.mob-img');
@@ -323,10 +312,9 @@
             }, 3000);
         }
 
-        // Automatic Translation Logic
         const translations = {
             'pt': {
-                'meta_title': 'HaloGrow™ Oficial | Fórmula Capilar Avançada',
+                'meta_title': 'HaloGrow™ Oficial | Halo Grow Spray & Fórmula Capilar',
                 'discount_badge': 'OFERTA POR TEMPO LIMITADO – ECONOMIZE 50% HOJE',
                 'hero_title_1': 'Recupere o Visual.',
                 'hero_title_2': 'Recupere a Confiança.',
@@ -347,7 +335,7 @@
                 'feat_3_title': 'Ação Rápida',
                 'feat_3_desc': 'Fórmula leve e não oleosa que se adapta à sua rotina diária.',
                 'guarantee_title': '30 Dias de Garantia de Reembolso',
-                'guarantee_desc': 'Experimente HaloGrow™ sem riscos. Se não estiver satisfeito em 30 dias, nós resolvemos. Sua confiança é o que importa.',
+                'guarantee_desc_full': 'Experimente HaloGrow™ sem riscos. Se não estiver satisfeito em 30 dias, nós resolvemos.',
                 'footer_office_title': 'Escritório Global Oficial',
                 'footer_contact_title': 'Canal de Suporte',
                 'f_privacy': 'Privacidade',
@@ -376,7 +364,6 @@
             }
         }
 
-        // Logic for Modals
         function openPolicy(type) {
             const modal = document.getElementById('policy-modal');
             const titleEl = document.getElementById('modal-title');
