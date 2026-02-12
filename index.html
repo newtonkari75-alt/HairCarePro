@@ -33,12 +33,12 @@
     <meta name="description" content="HaloGrow™ (Halo Grow Spray) is the #1 advanced scalp-targeted formula for visibly thicker hair. Trusted in US, UK, CA, AU. Save 50% Today.">
     <meta name="keywords" content="HaloGrow, Halo Grow Spray, Halo Grow Hair Spray, hair density, scalp treatment, thicker hair, hair regrowth formula">
     
-    <!-- Geo Targeting for Ad Quality -->
+    <!-- Geo Targeting para Qualidade de Anúncio -->
     <meta name="geo.region" content="US, GB, CA, AU, NZ, DE, IE, NL" />
     <meta name="coverage" content="Worldwide" />
     <link rel="icon" href="images/faviconV2.png" type="image/png">
 
-    <!-- JSON-LD Estendido (SEO Invisível de Alta Conversão) -->
+    <!-- JSON-LD Estendido -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org/",
@@ -56,21 +56,9 @@
         "price": "39.00",
         "priceValidUntil": "2026-12-31",
         "availability": "https://schema.org/InStock",
-        "shippingDetails": {
-          "@type": "OfferShippingDetails",
-          "shippingRate": { "@type": "MonetaryAmount", "value": "4.95", "currency": "USD" },
-          "deliveryTime": {
-            "@type": "ShippingDeliveryTime",
-            "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
-            "transitTime": { "@type": "QuantitativeValue", "minValue": 2, "maxValue": 15, "unitCode": "DAY" }
-          }
-        },
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "CH",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-          "merchantReturnDays": 30,
-          "returnMethod": "https://schema.org/ReturnByMail"
+        "seller": {
+            "@type": "Organization",
+            "name": "Adlibris USA LLC"
         }
       },
       "aggregateRating": {
@@ -93,13 +81,26 @@
         body { font-family: 'Montserrat', sans-serif; background-color: var(--bg-light); color: var(--primary-dark); -webkit-font-smoothing: antialiased; }
         .reveal { opacity: 0; transform: translateY(15px); transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
+        
+        /* Carousel Styling - Zero Borders & Shadows */
         .carousel-container { position: relative; width: 100%; aspect-ratio: 1/1; overflow: hidden; background: transparent; border: none !important; border-radius: 0 !important; box-shadow: none !important; }
         .carousel-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1s ease-in-out; }
         .carousel-image.active { opacity: 1; }
+        
         .btn-main { transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 1px; }
         .btn-main:active { transform: scale(0.98); }
-        @media (max-width: 767px) { h1 { font-size: 2.3rem !important; line-height: 1.1 !important; } .carousel-wrapper { margin-left: -1rem; margin-right: -1rem; width: calc(100% + 2rem); } }
-        @media (min-width: 768px) { h1 { font-size: 4.5rem !important; line-height: 1.05 !important; } }
+        
+        /* Mobile Typography Adjustments */
+        @media (max-width: 767px) { 
+            h1 { font-size: 2.1rem !important; line-height: 1.15 !important; } 
+            .carousel-wrapper { margin-left: -1rem; margin-right: -1rem; width: calc(100% + 2rem); } 
+        }
+        
+        /* Desktop Typography Refinement - Adjusted Size */
+        @media (min-width: 768px) { 
+            h1 { font-size: 3.5rem !important; line-height: 1.1 !important; max-width: 90%; } 
+        }
+        
         .glass-card { background: rgba(255, 255, 255, 0.3); backdrop-filter: blur(10px); border: 1px solid rgba(12, 35, 14, 0.05); }
     </style>
 </head>
@@ -112,11 +113,13 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
+        <!-- Hero Section - Ordem Mobile Priorizada (Título -> Imagem -> Botões) -->
         <section class="relative pt-8 md:pt-20">
             <div class="container mx-auto px-4 md:px-6">
                 <div class="flex flex-col md:grid md:grid-cols-2 md:gap-20 items-center">
+                    
                     <div class="flex flex-col w-full md:text-left">
+                        <!-- 1. Badge (Mobile Order #1) -->
                         <div class="inline-flex items-center gap-2 bg-white/60 px-4 py-2 rounded-full self-center md:self-start mb-6 border border-black/5 shadow-sm order-1">
                             <span class="w-2 h-2 rounded-full bg-green-800 animate-pulse"></span>
                             <span class="text-[10px] font-extrabold uppercase tracking-widest text-primary-dark" data-translate="discount_badge">
@@ -124,23 +127,24 @@
                             </span>
                         </div>
 
+                        <!-- 2. Título (Mobile Order #2) -->
                         <h1 class="text-center md:text-left font-extrabold text-primary-dark mb-4 tracking-tighter order-2">
                             <span data-translate="hero_title_1">Restore the Look.</span><br> 
                             <span class="opacity-60" data-translate="hero_title_2">Restore the Confidence.</span>
                         </h1>
 
-                        <!-- Photo/Carousel Mobile -->
+                        <!-- 3. Foto/Carrossel (Mobile Order #3) -->
                         <div class="carousel-wrapper my-8 md:hidden order-3">
                             <div class="carousel-container">
-                                <img src="images/halogrow.jpg" class="carousel-image active mob-img" alt="HaloGrow Spray Result 1">
-                                <img src="images/halogrow1.jpg" class="carousel-image mob-img" alt="HaloGrow Spray High Definition">
-                                <img src="images/halogrow2.jpg" class="carousel-image mob-img" alt="Halo Grow Hair Spray Texture">
-                                <img src="images/halogrow3.avif" class="carousel-image mob-img" alt="HaloGrow Scalp Care Detail">
-                                <img src="images/halogrow4.jpg" class="carousel-image mob-img" alt="HaloGrow Hair Solution">
+                                <img src="images/halogrow.jpg" class="carousel-image active mob-img" alt="HaloGrow Results">
+                                <img src="images/halogrow1.jpg" class="carousel-image mob-img" alt="HaloGrow Spray">
+                                <img src="images/halogrow2.jpg" class="carousel-image mob-img" alt="Halo Grow Hair Spray">
+                                <img src="images/halogrow3.avif" class="carousel-image mob-img" alt="HaloGrow Nutrition">
+                                <img src="images/halogrow4.jpg" class="carousel-image mob-img" alt="HaloGrow Strength">
                             </div>
                         </div>
 
-                        <!-- Buttons -->
+                        <!-- 4. Botões (Mobile Order #4) -->
                         <div class="flex flex-col sm:flex-row gap-4 w-full max-w-sm mx-auto md:mx-0 order-4 md:order-6 mt-4 md:mt-10">
                             <div class="flex flex-row gap-3 w-full">
                                 <a href="https://www.clickrtrckr.com/2LXFFTP/7BM9F7R/?uid=11234" class="btn-main flex-1 bg-white text-[#0C230E] border-2 border-primary-dark font-black py-4 px-4 rounded-xl text-center text-sm md:text-base shadow-lg hover:bg-gray-50 transition-all">
@@ -155,68 +159,81 @@
                             </p>
                         </div>
 
+                        <!-- 5. Conteúdo Descritivo (Mobile Order #5) -->
                         <div class="order-5 md:order-3">
                             <p class="text-center md:text-left text-lg md:text-xl font-semibold leading-relaxed my-8 opacity-90" data-translate="hero_desc">
                                 HaloGrow™ is an advanced scalp-targeted formula developed with clinically studied ingredients to support visibly thicker, healthier-looking hair.
                             </p>
+                            
+                            <!-- 6. Benefícios -->
                             <div class="glass-card rounded-3xl p-8 mb-10 order-6 md:order-4">
                                 <h3 class="text-[11px] font-extrabold uppercase tracking-widest opacity-40 mb-6" data-translate="benefits_label">Why Choose HaloGrow™</h3>
                                 <ul class="space-y-5 text-sm md:text-base font-bold">
-                                    <li class="flex items-center gap-4"><i data-feather="check" class="w-5 h-5 text-green-800"></i> <span data-translate="benefit_1">Advanced DHT-targeted technology</span></li>
-                                    <li class="flex items-center gap-4"><i data-feather="check" class="w-5 h-5 text-green-800"></i> <span data-translate="benefit_2">Supports stronger, fuller-looking hair</span></li>
-                                    <li class="flex items-center gap-4"><i data-feather="check" class="w-5 h-5 text-green-800"></i> <span data-translate="benefit_3">30-Day Satisfaction Guarantee</span></li>
+                                    <li class="flex items-center gap-4">
+                                        <i data-feather="check" class="w-5 h-5 text-green-800"></i> <span data-translate="benefit_1">Advanced DHT-targeted technology</span>
+                                    </li>
+                                    <li class="flex items-center gap-4">
+                                        <i data-feather="check" class="w-5 h-5 text-green-800"></i> <span data-translate="benefit_2">Supports stronger, fuller-looking hair</span>
+                                    </li>
+                                    <li class="flex items-center gap-4">
+                                        <i data-feather="check" class="w-5 h-5 text-green-800"></i> <span data-translate="benefit_3">30-Day Satisfaction Guarantee</span>
+                                    </li>
                                 </ul>
                             </div>
+                            
+                            <p class="text-center md:text-left text-xs md:text-sm opacity-60 italic mb-10 order-7 md:order-5" data-translate="audience_sub">
+                                Designed for men and women experiencing thinning, shedding, or reduced density — without prescriptions or surgery.
+                            </p>
                         </div>
                     </div>
 
-                    <!-- Desktop Carousel -->
+                    <!-- Imagem Desktop (Lado Direito) -->
                     <div class="hidden md:block reveal md:order-last">
                         <div class="carousel-container">
-                            <img src="images/halogrow.jpg" class="carousel-image active desk-img" alt="HaloGrow Spray - Original Result">
-                            <img src="images/halogrow1.jpg" class="carousel-image desk-img" alt="HaloGrow Spray - Advanced Scalp Formula">
-                            <img src="images/halogrow2.jpg" class="carousel-image desk-img" alt="Halo Grow Hair Spray Application">
-                            <img src="images/halogrow3.avif" class="carousel-image desk-img" alt="Halo Grow Spray Nutrition">
-                            <img src="images/halogrow4.jpg" class="carousel-image desk-img" alt="HaloGrow Strength Performance">
+                            <img src="images/halogrow.jpg" class="carousel-image active desk-img" alt="HaloGrow Spray Result">
+                            <img src="images/halogrow1.jpg" class="carousel-image desk-img" alt="HaloGrow Spray Formula">
+                            <img src="images/halogrow2.jpg" class="carousel-image desk-img" alt="Halo Grow Hair Spray Care">
+                            <img src="images/halogrow3.avif" class="carousel-image desk-img" alt="Halo Grow Spray Texture">
+                            <img src="images/halogrow4.jpg" class="carousel-image desk-img" alt="HaloGrow Performance">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Product Value -->
+        <!-- Product Value Section -->
         <section class="py-20 bg-white reveal">
             <div class="container mx-auto px-4 max-w-5xl text-center">
                 <h2 class="text-3xl md:text-4xl font-bold mb-8 tracking-tight" data-translate="tech_title">Smart, Targeted Scalp Technology</h2>
                 <p class="text-gray-600 mb-12 text-base md:text-lg leading-relaxed max-w-3xl mx-auto" data-translate="tech_desc">
-                    Unlike traditional supplements, HaloGrow™ delivers key ingredients directly to the scalp — where hair growth begins.
+                    Unlike traditional supplements, HaloGrow™ delivers key ingredients directly to the scalp — where hair growth begins. By supporting circulation and helping maintain a balanced scalp environment.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
                     <div class="p-10 bg-slate-50 rounded-[2rem] border border-black/5">
                         <i data-feather="activity" class="text-green-900 mb-6 w-8 h-8"></i>
                         <h4 class="font-bold text-xl mb-3" data-translate="feat_1_title">Follicle Focus</h4>
-                        <p class="text-sm text-gray-500" data-translate="feat_1_desc">Works at the root level to support improved hair density over time.</p>
+                        <p class="text-sm text-gray-500 leading-relaxed" data-translate="feat_1_desc">Works at the root level to support improved hair density over time.</p>
                     </div>
                     <div class="p-10 bg-slate-50 rounded-[2rem] border border-black/5">
                         <i data-feather="sun" class="text-green-900 mb-6 w-8 h-8"></i>
                         <h4 class="font-bold text-xl mb-3" data-translate="feat_2_title">Revitalisation</h4>
-                        <p class="text-sm text-gray-500" data-translate="feat_2_desc">Maintains a balanced scalp environment for a healthier appearance.</p>
+                        <p class="text-sm text-gray-500 leading-relaxed" data-translate="feat_2_desc">Maintains a balanced scalp environment for a healthier appearance.</p>
                     </div>
                     <div class="p-10 bg-slate-50 rounded-[2rem] border border-black/5">
                         <i data-feather="zap" class="text-green-900 mb-6 w-8 h-8"></i>
                         <h4 class="font-bold text-xl mb-3" data-translate="feat_3_title">Fast-Acting</h4>
-                        <p class="text-sm text-gray-500" data-translate="feat_3_desc">Lightweight, non-greasy formula that fits your daily routine seamlessly.</p>
+                        <p class="text-sm text-gray-500 leading-relaxed" data-translate="feat_3_desc">Lightweight, non-greasy formula that fits your daily routine seamlessly.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Guarantee Section -->
+        <!-- Guarantee Section - Fixed Button Contrast -->
         <section class="py-24 bg-[#0C230E] text-[#EDEDE4] text-center">
             <div class="container mx-auto px-4 reveal">
                 <h2 class="text-3xl md:text-5xl font-extrabold mb-8 tracking-tight" data-translate="guarantee_title">30-Day Money-Back Guarantee</h2>
                 <p class="text-lg md:text-xl opacity-80 mb-12 max-w-2xl mx-auto" data-translate="guarantee_desc_full">
-                    Try HaloGrow™ risk-free. If you’re not satisfied within 30 days, we’ll make it right.
+                    Try HaloGrow™ risk-free. If you’re not satisfied within 30 days, we’ll make it right. Your confidence matters.
                 </p>
                 <div class="flex flex-row justify-center gap-6 max-w-lg mx-auto">
                     <a href="https://www.clickrtrckr.com/2LXFFTP/7BM9F7R/?uid=11234" class="bg-white text-[#0C230E] font-black py-5 px-10 rounded-2xl flex-1 transition-all active:scale-95 shadow-2xl text-base md:text-lg">
@@ -247,15 +264,15 @@
             </div>
 
             <div class="flex flex-wrap justify-center gap-x-12 gap-y-6 mb-16 font-bold uppercase tracking-widest text-white/50">
-                <button onclick="openPolicy('privacy')" data-translate="f_privacy" class="hover:text-white">Privacy Policy</button>
-                <button onclick="openPolicy('terms')" data-translate="f_terms" class="hover:text-white">Terms of Sale</button>
-                <button onclick="openPolicy('shipping')" data-translate="f_shipping" class="hover:text-white">Shipping Policy</button>
-                <button onclick="openPolicy('returns')" data-translate="f_returns" class="hover:text-white">Return Policy</button>
-                <button onclick="openPolicy('contact')" data-translate="f_contact" class="hover:text-white">Contact Us</button>
+                <button onclick="openPolicy('privacy')" data-translate="f_privacy" class="hover:text-white transition-colors">Privacy Policy</button>
+                <button onclick="openPolicy('terms')" data-translate="f_terms" class="hover:text-white transition-colors">Terms of Sale</button>
+                <button onclick="openPolicy('shipping')" data-translate="f_shipping" class="hover:text-white transition-colors">Shipping Policy</button>
+                <button onclick="openPolicy('returns')" data-translate="f_returns" class="hover:text-white transition-colors">Return Policy</button>
+                <button onclick="openPolicy('contact')" data-translate="f_contact" class="hover:text-white transition-colors">Contact Us</button>
             </div>
 
             <div class="max-w-4xl mx-auto text-center opacity-40 space-y-6 leading-relaxed">
-                <p data-translate="f_disclaimer">Results may vary. HaloGrow™ is not intended to diagnose, treat, cure, or prevent any medical condition.</p>
+                <p data-translate="f_disclaimer">Results may vary. HaloGrow™ is not intended to diagnose, treat, cure, or prevent any medical condition. Information provided is for general informational purposes only.</p>
                 <p class="mt-12 font-bold text-sm" data-translate="f_copyright">Authorized Distributor. © 2026 HaloGrow™. All Rights Reserved.</p>
             </div>
         </div>
@@ -270,33 +287,34 @@
                 <button onclick="closeModal()" class="p-3 hover:bg-gray-100 rounded-full transition-colors"><i data-feather="x"></i></button>
             </div>
             <div id="modal-content" class="space-y-6 text-gray-700 text-sm md:text-base leading-relaxed text-left"></div>
-            <button onclick="closeModal()" class="mt-12 w-full bg-primary-dark text-white py-5 rounded-2xl font-bold uppercase tracking-widest text-xs" data-translate="btn_close">Close</button>
+            <button onclick="closeModal()" class="mt-12 w-full bg-primary-dark text-white py-5 rounded-2xl font-bold uppercase tracking-widest text-xs hover:opacity-90 transition-all" data-translate="btn_close">Close</button>
         </div>
     </div>
 
-    <!-- Templates -->
+    <!-- Policy Content Storage -->
     <template id="terms-content">
         <h3 class="font-bold text-lg">TERMS OF SALE</h3>
-        <p>Products sold by HaloGrow™ are for personal use only. Resale is prohibited. Agreement with Adlibris USA LLC.</p>
+        <p>Products sold by HaloGrow™ are for personal, non-commercial use only. Resale is prohibited. By placing an order, you acknowledge entering into an agreement with Adlibris USA LLC.</p>
     </template>
     <template id="privacy-content">
         <h3 class="font-bold text-lg">Privacy Policy</h3>
-        <p>We process your data securely in accordance with GDPR and CCPA. We collect essential information to fulfill requests.</p>
+        <p>We process your data securely in accordance with GDPR and CCPA. We collect essential information only to fulfill purchase requests and improve security. Your data is handled with SSL encryption.</p>
     </template>
     <template id="shipping-content">
         <h3 class="font-bold text-lg">Global Shipping Policy</h3>
-        <p>Worldwide shipping. Processing: 24h. US: 2-5 days. International: 10-18 days.</p>
+        <p>Fast worldwide shipping. Processing within 24h. US: 2-5 days. International: 10-18 days. Flat rate from $4.95.</p>
     </template>
     <template id="returns-content">
         <h3 class="font-bold text-lg">Return Policy</h3>
-        <p>30-Day Money-Back Guarantee. Return items in original condition. Contact support first.</p>
+        <p>30-Day Money-Back Guarantee for first-time orders. Items must be returned in original, unopened condition. Contact support@halogrow.com first for approval.</p>
     </template>
     <template id="contact-content">
         <h3 class="font-bold text-lg">Contact Us</h3>
-        <p>Email: support@halogrow.com | Phone: +1 (404) 678-8537</p>
+        <p>Email: support@halogrow.com | Phone: +1 (404) 678-8537 | NYC Office: Adlibris USA LLC, 1908 Thomes Avenue, Cheyenne, WY 82001, USA</p>
     </template>
 
     <script>
+        // Automatic Carousel Logic (3s)
         function startCarousel() {
             const deskImages = document.querySelectorAll('.desk-img');
             const mobImages = document.querySelectorAll('.mob-img');
@@ -312,6 +330,7 @@
             }, 3000);
         }
 
+        // Automatic Translation Logic
         const translations = {
             'pt': {
                 'meta_title': 'HaloGrow™ Oficial | Halo Grow Spray & Fórmula Capilar',
@@ -335,7 +354,7 @@
                 'feat_3_title': 'Ação Rápida',
                 'feat_3_desc': 'Fórmula leve e não oleosa que se adapta à sua rotina diária.',
                 'guarantee_title': '30 Dias de Garantia de Reembolso',
-                'guarantee_desc_full': 'Experimente HaloGrow™ sem riscos. Se não estiver satisfeito em 30 dias, nós resolvemos.',
+                'guarantee_desc_full': 'Experimente HaloGrow™ sem riscos. Se não estiver satisfeito em 30 dias, nós resolvemos. Sua confiança é o que importa para nós.',
                 'footer_office_title': 'Escritório Global Oficial',
                 'footer_contact_title': 'Canal de Suporte',
                 'f_privacy': 'Privacidade',
@@ -344,7 +363,7 @@
                 'f_returns': 'Devolução',
                 'f_contact': 'Contato',
                 'btn_close': 'Fechar',
-                'f_disclaimer': 'Resultados podem variar. HaloGrow™ não se destina a diagnosticar ou tratar condições médicas.',
+                'f_disclaimer': 'Resultados podem variar. HaloGrow™ não se destina a diagnosticar ou tratar condições médicas. Informações fornecidas não substituem aconselhamento médico profissional.',
                 'f_copyright': 'Distribuidora Autorizada. © 2026 HaloGrow™. Todos os direitos reservados.'
             }
         };
@@ -384,7 +403,9 @@
 
         function reveal() {
             document.querySelectorAll(".reveal").forEach(el => {
-                if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add("active");
+                if (el.getBoundingClientRect().top < window.innerHeight - 50) {
+                    el.classList.add("active");
+                }
             });
         }
 
