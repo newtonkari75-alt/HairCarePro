@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17958943090"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17958943090');
-</script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17958943090"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17958943090');
+    </script>
+
     <!-- Microsoft Clarity -->
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
@@ -39,10 +39,10 @@
     <link rel="alternate" hreflang="nl-nl" href="https://haircarespray.vercel.app/">
     
     <title data-translate="meta_title">HaloGrow™ Official | Halo Grow Spray & Hair Formula</title>
-    <meta name="description" content="HaloGrow™ (Halo Grow Spray) is a premium scalp-targeted formula designed to support visibly thicker, healthier-looking hair. Trusted in US, UK, CA, AU. Save 50% Today.">
+    <meta name="description" content="HaloGrow™ (Halo Grow Spray) is a premium scalp-targeted formula designed to support visibly thicker, healthier-looking hair. Trusted in US, UK, CA, AU, NZ, DE, IE, NL.">
     <meta name="keywords" content="HaloGrow, Halo Grow Spray, Halo Grow Hair Spray, hair appearance, scalp nutrition, hair density">
     
-    <!-- Geo Targeting -->
+    <!-- Geo Targeting para Qualidade de Anúncio -->
     <meta name="geo.region" content="US, GB, CA, AU, NZ, DE, IE, NL" />
     <link rel="icon" href="images/faviconV2.png" type="image/png">
 
@@ -88,18 +88,20 @@
         .reveal { opacity: 0; transform: translateY(15px); transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
         
-        .carousel-container { position: relative; width: 100%; aspect-ratio: 1/1; overflow: hidden; background: transparent; border: none !important; border-radius: 0 !important; }
+        .carousel-container { position: relative; width: 100%; aspect-ratio: 1/1; overflow: hidden; background: transparent; border: none !important; border-radius: 0 !important; box-shadow: none !important; }
         .carousel-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1s ease-in-out; }
         .carousel-image.active { opacity: 1; }
         
         .btn-main { transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 1px; }
         .btn-main:active { transform: scale(0.98); }
         
+        /* Mobile Typography */
         @media (max-width: 767px) { 
             h1 { font-size: 2.1rem !important; line-height: 1.15 !important; } 
             .carousel-wrapper { margin-left: -1rem; margin-right: -1rem; width: calc(100% + 2rem); } 
         }
         
+        /* Desktop Typography - Alinhamento Refinado */
         @media (min-width: 768px) { 
             h1 { font-size: 3.2rem !important; line-height: 1.1 !important; max-width: 95%; } 
         }
@@ -112,18 +114,18 @@
     <!-- Header -->
     <header class="sticky top-0 bg-white/80 backdrop-blur-md z-50 border-b border-black/5">
         <div class="container mx-auto px-4 py-3 flex justify-center">
-            <img src="images/halogrow-logo.svg" width="130" height="30" alt="HaloGrow™ Logo Oficial" class="h-7 w-auto">
+            <img src="images/halogrow-logo.svg" width="130" height="30" alt="HaloGrow Official Logo - Halo Grow Hair Spray" class="h-7 w-auto">
         </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
+        <!-- Hero Section - Ordem Mobile Priorizada -->
         <section class="relative pt-8 md:pt-20">
             <div class="container mx-auto px-4 md:px-6">
                 <div class="flex flex-col md:grid md:grid-cols-2 md:gap-20 items-center">
                     
                     <div class="flex flex-col w-full md:text-left">
-                        <!-- 1. Badge -->
+                        <!-- 1. Badge (Mobile Order #1) -->
                         <div class="inline-flex items-center gap-2 bg-white/60 px-4 py-2 rounded-full self-center md:self-start mb-6 border border-black/5 shadow-sm order-1">
                             <span class="w-2 h-2 rounded-full bg-green-800 animate-pulse"></span>
                             <span class="text-[10px] font-extrabold uppercase tracking-widest text-primary-dark" data-translate="discount_badge">
@@ -131,24 +133,24 @@
                             </span>
                         </div>
 
-                        <!-- 2. Título -->
+                        <!-- 2. Título (Mobile Order #2) -->
                         <h1 class="text-center md:text-left font-extrabold text-primary-dark mb-4 tracking-tighter order-2">
                             <span data-translate="hero_title_1">Restore the Look.</span><br> 
                             <span class="opacity-60" data-translate="hero_title_2">Restore the Confidence.</span>
                         </h1>
 
-                        <!-- 3. Foto/Carrossel Mobile -->
+                        <!-- 3. Foto/Carrossel (Mobile Order #3) -->
                         <div class="carousel-wrapper my-8 md:hidden order-3">
                             <div class="carousel-container">
-                                <img src="images/halogrow.jpg" class="carousel-image active mob-img" alt="HaloGrow Results">
-                                <img src="images/halogrow1.jpg" class="carousel-image mob-img" alt="HaloGrow Spray">
-                                <img src="images/halogrow2.jpg" class="carousel-image mob-img" alt="HaloGrow Spray Appearance">
-                                <img src="images/halogrow3.avif" class="carousel-image mob-img" alt="HaloGrow Nutrição">
-                                <img src="images/halogrow4.jpg" class="carousel-image mob-img" alt="HaloGrow Performance">
+                                <img src="images/halogrow.jpg" class="carousel-image active mob-img" alt="HaloGrow Spray Results 1">
+                                <img src="images/halogrow1.jpg" class="carousel-image mob-img" alt="HaloGrow Spray Appearance 2">
+                                <img src="images/halogrow2.jpg" class="carousel-image mob-img" alt="Halo Grow Hair Spray 3">
+                                <img src="images/halogrow3.avif" class="carousel-image mob-img" alt="Halo Grow Spray Nutrition 4">
+                                <img src="images/halogrow4.jpg" class="carousel-image mob-img" alt="HaloGrow Results 5">
                             </div>
                         </div>
 
-                        <!-- 4. Botões -->
+                        <!-- 4. Botões (Mobile Order #4) -->
                         <div class="flex flex-col sm:flex-row gap-4 w-full max-w-sm mx-auto md:mx-0 order-4 md:order-6 mt-4 md:mt-10">
                             <div class="flex flex-row gap-3 w-full">
                                 <a href="https://www.clickrtrckr.com/2LXFFTP/7BM9F7R/?uid=11234" class="btn-main flex-1 bg-white text-[#0C230E] border-2 border-primary-dark font-black py-4 px-4 rounded-xl text-center text-xs sm:text-sm shadow-lg hover:bg-gray-50 transition-all">
@@ -163,7 +165,7 @@
                             </p>
                         </div>
 
-                        <!-- 5. Conteúdo Descritivo -->
+                        <!-- 5. Conteúdo Descritivo (Mobile Order #5) -->
                         <div class="order-5 md:order-3">
                             <p class="text-center md:text-left text-lg md:text-xl font-semibold leading-relaxed my-8 opacity-90" data-translate="hero_desc">
                                 HaloGrow™ is an advanced scalp-targeted formula developed with clinically studied ingredients to support visibly thicker, healthier-looking hair.
@@ -190,26 +192,26 @@
                         </div>
                     </div>
 
-                    <!-- Desktop Carousel -->
+                    <!-- Imagem Desktop (Lado Direito) -->
                     <div class="hidden md:block reveal md:order-last">
                         <div class="carousel-container">
-                            <img src="images/halogrow.jpg" class="carousel-image active desk-img" alt="HaloGrow Spray Result">
-                            <img src="images/halogrow1.jpg" class="carousel-image desk-img" alt="HaloGrow Spray Advanced">
-                            <img src="images/halogrow2.jpg" class="carousel-image desk-img" alt="HaloGrow Hair Spray">
-                            <img src="images/halogrow3.avif" class="carousel-image desk-img" alt="HaloGrow Nutrition">
-                            <img src="images/halogrow4.jpg" class="carousel-image desk-img" alt="HaloGrow Solution">
+                            <img src="images/halogrow.jpg" class="carousel-image active desk-img" alt="HaloGrow Spray - Result">
+                            <img src="images/halogrow1.jpg" class="carousel-image desk-img" alt="HaloGrow Spray - Advanced Formula">
+                            <img src="images/halogrow2.jpg" class="carousel-image desk-img" alt="Halo Grow Hair Spray - Care">
+                            <img src="images/halogrow3.avif" class="carousel-image desk-img" alt="Halo Grow Spray - Texture">
+                            <img src="images/halogrow4.jpg" class="carousel-image desk-img" alt="HaloGrow Spray - Strength">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Product Value -->
+        <!-- Product Value Section -->
         <section class="py-20 bg-white reveal">
             <div class="container mx-auto px-4 max-w-5xl text-center">
                 <h2 class="text-3xl md:text-4xl font-bold mb-8 tracking-tight" data-translate="tech_title">Smart, Targeted Scalp Technology</h2>
                 <p class="text-gray-600 mb-12 text-base md:text-lg leading-relaxed max-w-3xl mx-auto" data-translate="tech_desc">
-                    Unlike traditional supplements, HaloGrow™ delivers key ingredients directly to the scalp — where hair growth begins.
+                    Unlike traditional supplements, HaloGrow™ delivers key ingredients directly to the scalp — where hair growth begins. By supporting circulation and helping maintain a balanced scalp environment.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
                     <div class="p-10 bg-slate-50 rounded-[2rem] border border-black/5">
@@ -275,13 +277,13 @@
             </div>
 
             <div class="max-w-4xl mx-auto text-center opacity-40 space-y-4 leading-relaxed">
-                <p data-translate="f_disclaimer">Results may vary. HaloGrow™ is not intended to diagnose, treat, cure, or prevent any medical condition. Information provided is for general informational purposes only.</p>
+                <p data-translate="f_disclaimer">Results may vary. HaloGrow™ is not intended to diagnose, treat, cure, or prevent any medical condition. Information provided is for general informational purposes only and does not replace professional medical advice.</p>
                 <p class="mt-10 font-bold text-sm" data-translate="f_copyright">Authorized Distributor. © 2026 HaloGrow™. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Modais -->
+    <!-- Universal Modal -->
     <div id="policy-modal" class="fixed inset-0 z-[100] hidden">
         <div class="fixed inset-0 bg-black/90 backdrop-blur-sm" onclick="closeModal()"></div>
         <div class="relative top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white w-[95%] max-w-4xl p-10 rounded-[2.5rem] max-h-[85vh] overflow-y-auto shadow-2xl">
@@ -297,15 +299,15 @@
     <!-- Templates -->
     <template id="terms-content">
         <h3 class="font-bold">TERMS OF SALE</h3>
-        <p>Products sold by HaloGrow™ are for personal, non-commercial use only. Resale is strictly prohibited. Agreement with Adlibris USA LLC.</p>
+        <p>Products sold by HaloGrow™ are for personal, non-commercial use only. Resale is prohibited. Agreement with Adlibris USA LLC.</p>
     </template>
     <template id="privacy-content">
         <h3 class="font-bold">Privacy Policy</h3>
-        <p>We process your data securely in accordance with GDPR and CCPA regulations. We collect essential information only to fulfill purchase requests.</p>
+        <p>We process your data securely in accordance with GDPR and CCPA. We collect essential information only to fulfill purchase requests.</p>
     </template>
     <template id="shipping-content">
         <h3 class="font-bold">Global Shipping Policy</h3>
-        <p>Worldwide shipping available. US: 2-5 days. International: 10-18 days. Flat rate from $4.95.</p>
+        <p>Fast worldwide shipping. Processing within 24h. US: 2-5 days. International: 10-18 days.</p>
     </template>
     <template id="returns-content">
         <h3 class="font-bold">Return Policy</h3>
@@ -313,11 +315,11 @@
     </template>
     <template id="contact-content">
         <h3 class="font-bold">Contact Us</h3>
-        <p>Email: support@halogrow.com | Phone: +1 (404) 678-8537 | NYC Office: Adlibris USA LLC, 1908 Thomes Avenue, Cheyenne, WY 82001, USA</p>
+        <p>Email: support@halogrow.com | Phone: +1 (404) 678-8537</p>
     </template>
 
     <script>
-        // Carrossel
+        // Automatic Carousel Logic (3s)
         function startCarousel() {
             const deskImages = document.querySelectorAll('.desk-img');
             const mobImages = document.querySelectorAll('.mob-img');
@@ -333,7 +335,7 @@
             }, 3000);
         }
 
-        // Traduções
+        // Translation Logic
         const translations = {
             'pt': {
                 'meta_title': 'HaloGrow™ Oficial | Halo Grow Spray & Fórmula Capilar',
@@ -386,7 +388,6 @@
             }
         }
 
-        // Modais
         function openPolicy(type) {
             const modal = document.getElementById('policy-modal');
             const titleEl = document.getElementById('modal-title');
